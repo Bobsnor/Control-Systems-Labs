@@ -25,12 +25,13 @@ a = s / wc;
 P = 1/(1+a);
 %step(P);
 
-Kp = 0.1;
-Ki = 0;
-Kd = 0.05;
+Kp = 0.00174;
+Ki = 0.005304;
+Kd = 0;
 D = Kp + Ki/s + Kd*s;
 
 
+Tuner = G*H;
 K = D*G*H;
 K = feedback(K,1);
 K = P*K;
