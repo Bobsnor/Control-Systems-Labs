@@ -13,26 +13,35 @@ s = tf('s');
 N = Km*(J2*s^2 + (b + d)*s + k);
 DN = J1*J2*s^3 + (J1 + J2)*(d + b)*s^2 + ((J1 + J2)*k+b^2+2*b*d)*s + 2*b*k;
 G = N/DN;
+% bode(G);
 
 wc = 200*pi;
 a = s / wc;
-B = (a + 1)*(a^2 + -2*cos(3/5*pi)*a + 1)*(a^2 + -2*cos(4/5*pi)*a +1);
-H = 1/B;
-%bode(H);
+% B = (a + 1)*(a^2 + -2*cos(3/5*pi)*a + 1)*(a^2 + -2*cos(4/5*pi)*a +1);
+% H = 1/B;
+% H = H*(1);
+% H = (s+1)*(s^2+s+1);
+% H = 1/H;
+H = 1/(1+a);
+% bode(H);
 
 wc = 20*pi;
 a = s / wc;
 P = 1/(1+a);
 %step(P);
 
-Kp = 0.00174;
-Ki = 0.005304;
+Kp = 0.002784;
+Ki = 0.007856;
 Kd = 0;
 D = Kp + Ki/s + Kd*s;
-
+%bode(D);
 
 Tuner = G*H;
+% bode(Tuner);
 K = D*G*H;
+%bode(K);
 K = feedback(K,1);
+%bode(K);
 K = P*K;
+% bode(K);
 step(K);

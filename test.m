@@ -24,11 +24,16 @@ myobj.ipaddress = '131.155.127.198'; % should be '131.155.127.198' for the
 
     
 % configure the transfer functions of the control system
-myobj.D = tf(0.001,1);
-myobj.P = tf(1,[0.5,1]);
-myobj.F = tf(0,1);
-myobj.H = tf(1,1); % if the system becomes unstable with these settings 
+% myobj.D = tf(0.001,1);
+% myobj.P = tf(1,[0.5,1]);
+% myobj.F = tf(0,1);
+% myobj.H = tf(1,1); % if the system becomes unstable with these settings 
                    % change de sign of the H transfer fucntion
+
+myobj.D = D;
+myobj.P = P;
+myobj.F = 0;
+myobj.H = H;
                    
 % low level data manipulation functions
 if 0 % replace 0 with 1 to run this part
