@@ -10,7 +10,7 @@
 if exist('myobj','var')
     myobj.CloseConnection;
     delete(myobj)
-    clear('myoj')
+    clear('myobj')
 end
 myobj = HW_LabAssignment1; % instantiate the object
 
@@ -18,7 +18,7 @@ myobj.ipaddress = '172.22.11.2'; % IP address of the system, for USB
 
 myobj.ipaddress = '172.16.0.1'; % should be '172.16.0.1' for WiFi
 
-myobj.ipaddress = '131.155.127.198'; % should be '131.155.127.198' for the
+% myobj.ipaddress = '131.155.127.198'; % should be '131.155.127.198' for the
 %Internet connectio, one of the setups may be available via Internet
 %outside the LAB hours.
 
@@ -28,11 +28,11 @@ myobj.ipaddress = '131.155.127.198'; % should be '131.155.127.198' for the
 % myobj.P = tf(1,[0.5,1]);
 % myobj.F = tf(0,1);
 % myobj.H = tf(1,1); % if the system becomes unstable with these settings 
-                   % change de sign of the H transfer fucntion
-
+                   % change de sign of the H transfer fucntion                   
+                   
 myobj.D = D;
 myobj.P = P;
-myobj.F = 0;
+myobj.F = tf(0,1);
 myobj.H = H;
                    
 % low level data manipulation functions

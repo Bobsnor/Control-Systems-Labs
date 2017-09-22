@@ -30,11 +30,29 @@ a = s / wc;
 P = 1/(1+a);
 %step(P);
 
-Kp = 0.002784;
-Ki = 0.007856;
+
+% THIS WORKS SEMI
+
+% Ratio Kp and Ki is ok. Kp / Ki = 3/2
+% Lower means less noise, higher means more speed
+
+% Kp = 0.030;
+% Ki = 0.020;
+% Kd = 0;
+
+Kp = 0.08;
+Ki = 0.08;
 Kd = 0;
+
 D = Kp + Ki/s + Kd*s;
-%bode(D);
+
+% NOISE: 90 Hz
+% wc = 100*pi; % higher cutoff frequency to filter out noise
+% a = s / wc;
+% U = 1/(1+a);
+% D = D*U;
+
+% bode(D);
 
 Tuner = G*H;
 % bode(Tuner);
@@ -44,4 +62,4 @@ K = feedback(K,1);
 %bode(K);
 K = P*K;
 % bode(K);
-step(K);
+% step(K);
