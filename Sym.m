@@ -25,7 +25,7 @@ a = s / wc;
 H = 1/(1+a);
 % bode(H);
 
-wc = 20*pi;
+wc = 10*pi; %% FIX DIT; step was te steil
 a = s / wc;
 P = 1/(1+a);
 %step(P);
@@ -40,8 +40,10 @@ P = 1/(1+a);
 % Ki = 0.020;
 % Kd = 0;
 
-Kp = 0.08;
-Ki = 0.08;
+
+% sisotool(G*H,D,tf(1,1),P)
+Kp = 0.035551;
+Ki = Kp*19.31;
 Kd = 0;
 
 D = Kp + Ki/s + Kd*s;
@@ -57,7 +59,7 @@ D = Kp + Ki/s + Kd*s;
 Tuner = G*H;
 % bode(Tuner);
 K = D*G*H;
-%bode(K);
+% bode(K);
 K = feedback(K,1);
 %bode(K);
 K = P*K;
