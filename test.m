@@ -18,7 +18,7 @@ myobj.ipaddress = '172.22.11.2'; % IP address of the system, for USB
 
 myobj.ipaddress = '172.16.0.1'; % should be '172.16.0.1' for WiFi
 
-% myobj.ipaddress = '131.155.127.198'; % should be '131.155.127.198' for the
+myobj.ipaddress = '131.155.127.198'; % should be '131.155.127.198' for the
 %Internet connectio, one of the setups may be available via Internet
 %outside the LAB hours.
 

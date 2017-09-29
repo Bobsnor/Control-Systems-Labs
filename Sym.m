@@ -25,7 +25,7 @@ a = s / wc;
 H = 1/(1+a);
 % bode(H);
 
-wc = 10*pi; %% FIX DIT; step was te steil
+wc = 8*pi; %% FIX DIT; step was te steil
 a = s / wc;
 P = 1/(1+a);
 %step(P);
@@ -42,8 +42,8 @@ P = 1/(1+a);
 
 
 % sisotool(G*H,D,tf(1,1),P)
-Kp = 0.035551;
-Ki = Kp*19.31;
+Kp = 0.060775;
+Ki = Kp*8.349;
 Kd = 0;
 
 D = Kp + Ki/s + Kd*s;
