@@ -21,10 +21,13 @@ Pos = [pbottom pmiddle ptop];
 
 
 %% START GUI : Measuring voltages on the setup stored in vector V
-waitfor(CalibratePosition);
+% waitfor(CalibratePosition);
 
+% save('Voltage.mat', 'V');
 %% Linear fit
 %*************************for students to complete****************
+load('Voltage.mat');
+poscal = polyfit(V,Pos,1);
 
 % use the matlab function polyfit to make a linear fit on measered
 % position and sensor voltage. Put the results in the variable called
