@@ -17,19 +17,19 @@ Feq = m*g;
 % depending on the set-up you are using.
 
 % a = 0.084; 
-% a = 0.1113;
+a = 0.1113;
 
 %% Specify the following variables that you have found in Assignment II-2:
 %
-% Pm = ;
-% Cm = ;
-% Y= ;
-% I= ;
+Pm = 0.0012;
+Cm = 9.926785714285727e-04;
+Y= [0.044,0.049,0.054];
+I= [3.2,2.36,1.66];
 
 %% Obtain linear model (Assignment II 3)
 % Pick an operating point (middle one)
-% I0 = ;
-% Y0 = ;
+I0 = I(2);
+Y0 = Y(2);
 
 % From linearization we know the linearized transfer function, using I0,
 % Y0, Cm, Pm, a
