@@ -42,4 +42,4 @@ LinTime = Fm(2) + dI*(I-I0) + dY*(Y-Y0);
 
 %Construct transfer function (LinModel) for the plant using MATLAB function
 %tf
-% LinModel = ;
+LinModel = ;
