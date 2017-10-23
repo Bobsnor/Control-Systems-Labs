@@ -37,8 +37,8 @@ Y0 = Y(2);
 Fm = (Cm.*I+Pm)./((a-d)-Y);
 dI = Cm/((a-d)-Y0);
 dY = (Cm * I0 + Pm) / (((a-d)-Y0)^2);
-tf('s');
-H = dI/((m*(s^2)-dy));
+s = tf('s');
+H = dI/((m*(s^2)-dY));
 
 %Construct transfer function (LinModel) for the plant using MATLAB function
 %tf
