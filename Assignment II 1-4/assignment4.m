@@ -7,22 +7,26 @@ clc;
 % I0 = ;
 % Y0 = ;
 % LinModel = ;
+load('Assignment3.mat');
+s = tf('s');
 
+load('Assignment4.mat');
 
 % Use rltool to design a Controller C
-rltool(LinModel)
+sisotool(LinModel, C)
 input('Press enter to continue after exporting the controller to workspace.');
 % After exporting a Controller C to workspace execute this part of the
 % script
 
 % C = ;
+save('Assignment4.mat', 'C');
 
 [num, den] = tfdata(C,'v');
 
 % construct from num and den a modified version (C_num, C_den) that is equal to C but without
 % integrator.
 
-% C_num = ;
-% C_den = ; 
+C_num = num;
+C_den = 1; 
 
 [P_num,P_den] = tfdata(LinModel,'v'); % put plant in simulation model form.

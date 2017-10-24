@@ -38,8 +38,7 @@ Fm = (Cm.*I+Pm)./((a-d)-Y);
 dI = Cm/((a-d)-Y0);
 dY = (Cm * I0 + Pm) / (((a-d)-Y0)^2);
 s = tf('s');
-H = dI/((m*(s^2)-dY));
-
+LinModel = dI/((m*(s^2)-dY));
+save('Assignment3.mat', 'I0', 'Y0', 'LinModel');
 %Construct transfer function (LinModel) for the plant using MATLAB function
 %tf
-% LinModel = laplace(LinTime, [I Y], s);
