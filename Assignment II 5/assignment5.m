@@ -2,6 +2,9 @@
 clear;
 close all;
 clc;
+load('Assignment1.mat');
+load('Assignment3.mat');
+load('Assignment4.mat');
 
 
 %% Specify the following variables that resulted from previous assignments:
