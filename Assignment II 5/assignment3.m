@@ -21,8 +21,8 @@ a = 0.1113;
 
 %% Specify the following variables that you have found in Assignment II-2:
 %
-Pm = 0.0012;
-Cm = 9.926785714285727e-04;
+Pm = 9.926785714285727e-04;
+Cm = 0.0012;
 Y= [0.044,0.049,0.054];
 I= [3.2,2.36,1.66];
 
