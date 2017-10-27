@@ -18,13 +18,13 @@ kd = 15e5;
 % C = 1.0618e9*(s+589.5)*(s+1.748)/s;
 C = kp + ki/s + kd*s;
 
-C = C/((s+10001)*(s+10000)); % C + poles
+% C = C/((s+1e20)*(s+2e20)); % C + poles
 % pidTuner(LinModel);
 
 % load('Assignment4.mat');
 
 % Use rltool to design a Controller C
-% sisotool(LinModel, C);
+sisotool(LinModel, C);
 % input('Press enter to continue after exporting the controller to workspace.');
 % After exporting a Controller C to workspace execute this part of the
 % script

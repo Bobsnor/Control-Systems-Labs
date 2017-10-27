@@ -42,3 +42,4 @@ LinModel = dI/((m*(s^2)-dY));
 save('Assignment3.mat', 'I0', 'Y0', 'LinModel');
 %Construct transfer function (LinModel) for the plant using MATLAB function
 %tf
+c = dI * I0 + m*g + dY * Y0 - Fm(2);
