@@ -29,7 +29,7 @@ Pos = [pbottom pmiddle ptop];
 load('Voltage.mat');
 poscal = polyfit(V,Pos,1);
 save('Assignment1.mat', 'poscal');
-V(4) = 4;
+V(4) = 4; %Placeholders so that the line will continue after the last point
 Pos(4) = 0;
 poscallin = V.*poscal(1) + poscal(2);
 plot(poscallin, V);
@@ -38,8 +38,8 @@ scatter(Pos,V);
 title('Position calibration');
 xlim([0.043 0.055]);
 ylim([1.8 3.8]);
-xlabel('Voltage (V)');
-ylabel('Height (m)');
+ylabel('Voltage (V)');
+xlabel('Height (m)');
 legend('Calibration', 'Measurements', 'Location', 'northwest');
 % use the matlab function polyfit to make a linear fit on measered
 % position and sensor voltage. Put the results in the variable called
