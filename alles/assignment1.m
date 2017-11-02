@@ -40,7 +40,7 @@ xlim([0.043 0.055]);
 ylim([1.8 3.8]);
 xlabel('Voltage (V)');
 ylabel('Height (m)');
-legend('Measurements', 'Calibration', 'Location', 'northwest');
+legend('Calibration', 'Measurements', 'Location', 'northwest');
 % use the matlab function polyfit to make a linear fit on measered
 % position and sensor voltage. Put the results in the variable called
 % poscal. Produce a plot showing the measured dta points together with the
